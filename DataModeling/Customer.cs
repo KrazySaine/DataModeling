@@ -12,19 +12,19 @@
         public ICollection<Addresses> Addresses { get; set; }
         public ICollection<Likes> Likes { get; set; }
     }
-    public class PhoneNumbers
+    public class PhoneNumbers //one to many
     {
         public int Id { get; set; }
         public Customer Customer { get; set; }
         public string PhoneNumber { get; set; }
     }
-    public class Addresses
+    public class Addresses //many to one
     {
         public int Id { get; set; }
         public Customer Customer { set; get; }
         public string Address { get; set; }
     }
-    public class Likes
+    public class Likes //many to many
     {
         public int Id { get; set; }
         public Customer Customer{ get; set; }
